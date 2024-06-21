@@ -180,24 +180,3 @@ VALUES (nextval('books_book_id_seq'::regclass), '12122', 'jorge', '2024-02-23', 
 Validamos de forma visual que este el registro
 
 ![27](assets/27.png)
-
-
-
-
-
-
-
-
-
-sudo systemctl start docker
-sudo systemctl enable docker
-
-
-sudo usermod -aG docker $USER
-
-sudo docker run hello-world
-
-
-docker run --name mi-postgres -e POSTGRES_PASSWORD=mi_contraseña -v $HOME/docker/postgres_data:/var/lib/postgresql/data -p 5432:5432 -d postgres
-
-

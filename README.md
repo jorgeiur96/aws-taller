@@ -23,7 +23,8 @@ En tipo de instancia ponemos micro y usamos vockey como par key
 Configuramos la  red , Creamos  un grupo , le damos permitir ssh y las conexiones a internet 
 
 ![buscar servicio EC2](assets/6.png)
-le damos en lanzar instancia y esperamos que se cree la instancia de EC2
+
+Le damos en lanzar instancia y esperamos que se cree la instancia de EC2
 
 ![buscar servicio EC2](assets/7.png)
 

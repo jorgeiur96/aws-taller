@@ -1,9 +1,9 @@
 # Creacion de EC2 con conexion externa
 
 ### Buscar Servicio
-se busca en la barra  de busqueda  el servicio EC2
+Se busca en la barra  de busqueda  el servicio EC2
 ![buscar servicio EC2](assets/1.png)
-en la pagina que se habre buscamos  lanzar la instancia o *launch instance*
+En la pagina que se habre buscamos  lanzar la instancia o *launch instance*
 ![buscar servicio EC2](assets/2.png)
 En la pagina que se habre ponemos  el nombre del EC2 
 ![buscar servicio EC2](assets/3.png)
@@ -27,11 +27,11 @@ Lo primero que vamos a hacer es actualizar la maquina con el comando :
 
 ``` sudo yum update -y ```
 
-Agregamos el repo de docker a los repo de la maquina virtual con el siguiente comando :
+Agregamos el repo de docker a los repo de la maquina virtual con el siguiente Comando :
 
 
 ``` sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo```
-y  finalmente le damos el comando para instalar docker 
+Y  finalmente le damos el comando para instalar docker 
 ```sudo yum install docker  ``` 
 
 ![buscar servicio EC2](assets/11.png)
@@ -40,7 +40,7 @@ Validamos la version y que se alla instalado con el comando :
 
 ## Configurar postgres con docker
 
-activamos docker para que inicia con nuestro EC2
+Activamos docker para que inicia con nuestro EC2
 ```sudo systemctl start docker```
 ```sudo systemctl enable docker```
 
@@ -48,7 +48,7 @@ Configuramos el grupo para que no nos pida root a la hora de iniciar docker
 
 ```sudo usermod -aG docker $USER```
 
-ejecutamos para validar que todo este bien 
+Ejecutamos para validar que todo este bien 
 ```sudo docker run hello-world```
 
 Luego cerramos la consola y la volvemos abrir para que se apliquen los cambios 
@@ -65,12 +65,12 @@ Le damos en editar reglas de entrada
 ![16](assets/16.png)
 Vemos las reglas que existen
 ![17](assets/17.png)
-agregamos una nueva regla para postgre
+Agregamos una nueva regla para postgre
 
 ![18](assets/18.png)
 Le damos en guardar reglas
 ![19](assets/19.png)
-nos saldra una leyenda donde nos dira que las  reglas han sido creadas
+Nos saldra una leyenda donde nos dira que las  reglas han sido creadas
 ![20](assets/20.png)
 ## Configuracion de cliente externo
 Validamos nuestra ip publica
@@ -95,9 +95,9 @@ CREATE TABLE books (
     stock INT DEFAULT 0
 );
 ```
-validamos de forma visual que este creada 
+Validamos de forma visual que este creada 
 ![25](assets/25.png)
-nos conectamos a  nuestro docker por consola en el EC2 e insertamos  un registro
+Nos conectamos a  nuestro docker por consola en el EC2 e insertamos  un registro
 ```docker exec -it mi-postgres psql -U postgres```
 Seleccionamos la bd creada
 ```\c test-aws ```
